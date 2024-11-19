@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN 1 Manonjaya - Kontak</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="taufik_content-wrapper">
+        <!-- Header dengan latar belakang dan teks utama -->
+        <header>
+            <div class="taufik_header-content">
+                <!-- Logo Kabupaten Tasikmalaya di sisi kiri -->
+                <img src="GAMBAR/logo-kab.png" alt="Logo Kabupaten Tasikmalaya" class="taufik_logo-kabupaten">
+                
+                <!-- Teks utama di tengah header -->
+                <div class="taufik_teks-atas">
+                    <p>PEMERINTAH KABUPATEN TASIKMALAYA</p>
+                    <p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                    <h1>SDN 1 MANONJAYA</h1>
+                    <p>Jl. RTA Prawira Adiningrat No. 139, Manonjaya, Kab. Tasikmalaya, Jawa Barat<br>
+                        NPSN: 20210055 | Telp. (0265) 381340 | Email: sdnegerisatumanojaya@yahoo.co.id</p>
+                </div>
+                
+                <!-- Logo SD di sisi kanan -->
+                <img src="GAMBAR/logo-sd.png" alt="Logo SDN 1 Manonjaya" class="taufik_logo-sdn">
+            </div>
+        </header>
+
+        <!-- Navigasi utama dengan tautan halaman -->
+        <nav>
+            <div class="taufik_menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="taufik_nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="informasi.html">Informasi</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html" class="taufik_active">Kontak</a></li>
+                <li><a href="buku-tamu.html">Buku Tamu</a></li>
+            </ul>
+        </nav>
+
+        <!-- Teks berjalan dengan ID sesuai CSS -->
+        <div id="taufik_teksjalan">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td style="width:55px;"><strong>TERKINI:</strong> </td>
+                        <td>
+                            <marquee onmouseout="this.start()" onmouseover="this.stop()" scrollamount="4"
+                                scrolldelay="40">Selamat datang di website SDN 1 Manonjaya. Kami menyediakan
+                                informasi tentang profil sekolah, informasi, berita, serta
+                                galeri sekolah. Semoga informasi yang kami sajikan bermanfaat bagi seluruh
+                                pengunjung. Terima kasih atas kunjungannya.
+                            </marquee>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <main>
+            <!-- Bagian kontak utama -->
+            <section id="kontak" class="taufik_section">
+                <h2>Kontak Kami</h2>
+                <p>
+                    Jika Anda membutuhkan informasi lebih lanjut, silakan hubungi kami melalui kontak di bawah ini:<br>
+                    <strong>Alamat :</strong> Jl. RTA Prawira Adiningrat No. 139, Manonjaya, Kabupaten Tasikmalaya, Jawa Barat<br>
+                    <strong>Telepon :</strong> <a href="tel:+62265381340">(0265) 381340</a><br>
+                    <strong>Email :</strong> <a href="mailto:sdnegerisatumanojaya@yahoo.co.id">sdnegerisatumanojaya@yahoo.co.id</a><br>
+                    <br>
+                    <strong>Media Sosial</strong><br>
+                    <strong>Facebook :</strong> <a href="https://web.facebook.com/p/SDN-1-Manonjaya-100054340188709/?locale=id_ID&_rdc=1&_rdr" target="_blank">SDN1Manonjaya</a><br>
+                    <strong>Instagram :</strong> <a href="https://www.instagram.com/sdn_1_manonjaya/" target="_blank">@sdn1manonjaya</a><br>
+                </p>
+            </section>
+        </main>
+        
+        <!-- Footer dengan informasi hak cipta -->
+        <footer>
+            <p>&copy; 2024 SDN 1 Manonjaya. All rights reserved.</p><br>
+            <p> Web by : <a href="https://www.instagram.com/taufikchy_/" target="_blank">taufikchy_</a><br></p>
+        </footer>
+
+        <!-- Script untuk rotasi background dan menandai tautan aktif -->
+        <script>
+             function toggleMenu() {
+                document.getElementById("taufik_nav-links").classList.toggle("show");
+            }
+
+            const backgroundImages = [
+                "GAMBAR/4.jpg", 
+                "GAMBAR/2.jpg", 
+                "GAMBAR/1.jpg", 
+                "GAMBAR/lapang.webp"
+            ];
+
+            let currentBackgroundIndex = 0;
+            const header = document.querySelector("header");
+
+            // Fungsi untuk mengganti background image
+            function changeBackgroundImage() {
+                currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.length;
+                header.style.backgroundImage = `url(${backgroundImages[currentBackgroundIndex]})`;
+            }
+
+            setInterval(changeBackgroundImage, 3000);
+
+            // Menandai tautan navigasi yang sesuai dengan halaman aktif
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll("nav ul li a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("taufik_active");
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+/* Reset CSS */
+/* Mengatur ulang margin, padding, dan box-sizing untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+/* Mengatur gaya dasar untuk body, termasuk font, latar belakang, dan tata letak */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(GAMBAR/bg.avif);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Content Wrapper */
+/* Mengatur lebar maksimal konten dan memberikan background putih serta bayangan */
+.taufik_content-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+/* Mengatur latar belakang, tinggi, posisi teks, dan gaya umum header */
+header {
+    position: relative;
+    background-image: url(GAMBAR/4.jpg);
+    background-size: cover;
+    background-position: center 10%;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 8px 8px 0 0;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Container utama untuk logo dan teks */
+/* Mengatur tata letak header dengan logo dan teks yang tersebar */
+.taufik_header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Gaya untuk logo di kiri dan kanan */
+.taufik_logo-sdn {
+    width: 110px;
+    height: auto;
+    z-index: 2;
+}
+
+.taufik_logo-kabupaten {
+    width: 100px;
+    height: auto;
+    z-index: 2;
+}
+
+/* Gaya untuk teks di tengah */
+/* Mengatur warna dan teks tengah di header */
+.taufik_teks-atas {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    z-index: 2;
+}
+
+.taufik_teks-atas p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 5px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.taufik_teks-atas h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+.taufik_teks-atas p.taufik_subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay gelap di header */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Gaya teks dalam header */
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Navigation Styles */
+/* Mengatur gaya dasar navigasi dan tautan */
+nav {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: #4c8bf5;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #4c8bf5;
+    color: #fff;
+}
+
+/* Marquee */
+/* Mengatur gaya untuk elemen teks berjalan */
+#taufik_teksjalan {
+    background-color: #f0f4f7;
+    color: #4c8bf5;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Styles */
+/* Gaya umum untuk setiap section di halaman */
+.taufik_section {
+    margin: 30px 0;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Gaya saat mouse hover pada section */
+.taufik_section:hover {
+    transform: translateY(-5px);
+}
+
+/* Gaya judul dan subjudul */
+h2 {
+    color: #4c8bf5;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+h4 {
+    color: #4c8bf5;
+}
+
+/* Form Buku Tamu Styles */
+/* Mengatur tata letak dan gaya form buku tamu */
+#taufik_form-buku-tamu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#taufik_form-buku-tamu label {
+    font-weight: 500;
+    color: #333;
+}
+
+#taufik_form-buku-tamu input,
+#taufik_form-buku-tamu textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#taufik_form-buku-tamu button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4c8bf5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#taufik_form-buku-tamu button:hover {
+    background-color: #3a6bbf;
+}
+
+/* Footer Styles */
+/* Gaya untuk elemen footer, termasuk warna dan padding */
+footer {
+    background-color: #4c8bf5;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 0 0 8px 8px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+/* Penyesuaian tata letak untuk perangkat dengan lebar di bawah 768px */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .taufik_section {
+        margin: 20px 0;
+    }
+}
+
+/* Komentar Styles */
+/* Gaya untuk daftar dan item komentar */
+#taufik_komentar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.taufik_komentar-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.komentar-item strong {
+    color: #4c8bf5;
+}
+
+/* Tombol Hapus pada Komentar */
+/* Mengatur gaya tombol hapus untuk setiap komentar */
+.taufik_hapus-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hapus-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Gaya untuk tautan navigasi yang aktif */
+/* Memberikan tanda khusus untuk halaman yang sedang dibuka */
+nav ul li a.taufik_active {
+    background-color: #4c8bf5;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Gallery Styles */
+/* Mengatur tata letak untuk kontainer galeri */
+.taufik_gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Mengatur item galeri, seperti gambar dan video */
+.taufik_gallery-item {
+    width: 300px;
+    text-align: center;
+}
+
+.gallery-image, .gallery-video, iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item p {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Gaya untuk tautan di footer */
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Gaya untuk Galeri pada Layar Lebar */
+.taufik_gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Untuk layar tablet */
+@media (max-width: 768px) {
+    .taufik_gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Untuk layar ponsel */
+@media (max-width: 480px) {
+    .taufik_gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+h1 {
+    font-size: 2rem; /* Akan lebih kecil di layar kecil */
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Sembunyikan menu pada layar kecil dan tampilkan ikon hamburger */
+.taufik_menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Pada layar kecil, tampilkan ikon hamburger dan sembunyikan menu */
+@media (max-width: 768px) {
+    .taufik_menu-toggle {
+        display: block;
+    }
+    #taufik_nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #taufik_nav-links.show {
+        display: flex;
+    }
+}
+

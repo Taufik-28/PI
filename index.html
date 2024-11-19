@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- Deklarasi tipe dokumen HTML dan bahasa Indonesia -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN 1 Manonjaya - Beranda</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Menghubungkan halaman dengan file CSS eksternal styles.css untuk styling -->
+</head>
+
+<body>
+    <!-- Kontainer utama dari halaman -->
+    <div class="taufik_content-wrapper">
+        <!-- Header untuk bagian atas halaman dengan latar belakang dan konten utama -->
+        <header>
+            <!-- Bagian untuk menampung logo dan teks header -->
+            <div class="taufik_header-content">
+                <img src="GAMBAR/logo-kab.png" alt="Logo Kabupaten Tasikmalaya" class="taufik_logo-kabupaten">
+                <!-- Logo kabupaten di sisi kiri header -->
+
+                <div class="taufik_teks-atas">
+                    <!-- Teks informasi di tengah header -->
+                    <p>PEMERINTAH KABUPATEN TASIKMALAYA</p>
+                    <p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                    <h1>SDN 1 MANONJAYA</h1>
+                    <p>Jl. RTA Prawira Adiningrat No. 139, Manonjaya, Kab. Tasikmalaya, Jawa Barat<br>
+                        NPSN: 20210055 | Telp. (0265) 381340 | Email: sdnegerisatumanojaya@yahoo.co.id</p>
+                </div>
+
+                <img src="GAMBAR/logo-sd.png" alt="Logo SDN 1 Manonjaya" class="taufik_logo-sdn">
+                <!-- Logo SDN di sisi kanan header -->
+            </div>
+        </header>
+
+        <!-- Navigasi utama halaman dengan daftar tautan ke halaman lain -->
+        <nav>
+            <div class="taufik_menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="taufik_nav-links">
+                <li><a href="index.html" class="taufik_active">Beranda</a></li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="informasi.html">Informasi</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="buku-tamu.html">Buku Tamu</a></li>
+                <!-- Setiap tautan di sini akan mengarahkan ke halaman yang sesuai -->
+            </ul>
+        </nav>
+
+        <!-- Bagian untuk menampilkan teks berjalan dengan informasi terkini -->
+        <div id="taufik_teksjalan">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td style="width:55px;"><strong>TERKINI:</strong> </td>
+                        <td>
+                            <!-- Marquee dengan teks yang bergerak untuk informasi terbaru -->
+                            <marquee onmouseout="this.start()" onmouseover="this.stop()" scrollamount="4"
+                                scrolldelay="40">Selamat datang di website SDN 1 Manonjaya. Kami menyediakan
+                                informasi tentang profil sekolah, informasi, berita, serta galeri sekolah. Semoga
+                                informasi yang kami sajikan bermanfaat bagi seluruh pengunjung. Terima kasih atas
+                                kunjungannya.
+                            </marquee>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Konten utama halaman -->
+        <main>
+            <!-- Bagian konten selamat datang -->
+            <section id="beranda" class="taufik_section">
+                <h2>
+                    <center>Selamat Datang di SDN 1 Manonjaya </center>
+                </h2>
+                <p align="justify">
+                    SDN 1 Manonjaya adalah lembaga pendidikan dasar yang berlokasi di Manonjaya, Tasikmalaya.
+                    Kami berkomitmen untuk mendidik generasi penerus bangsa dengan memberikan pendidikan yang
+                    berkualitas dan mendukung perkembangan karakter positif pada setiap siswa.
+                </p>
+                <p>
+                    SDN 1 Manonjaya merupakan sekolah dasar negeri yang berada di bawah naungan Dinas Pendidikan
+                    Kabupaten Tasikmalaya. Sekolah ini berkomitmen untuk menyediakan pendidikan dasar yang bermutu
+                    tinggi, mendukung perkembangan intelektual, emosional, dan keterampilan dasar anak didik, serta
+                    membangun karakter siswa yang disiplin, religius, dan berakhlak mulia.
+                </p>
+                <p>
+                    Kami menyediakan berbagai informasi tentang kegiatan sekolah,
+                    berita terbaru, dan pencapaian siswa untuk orang tua, siswa, dan masyarakat.
+                    Terima kasih telah mengunjungi website kami.
+                </p>
+            </section>
+
+            <!-- Bagian komentar dari pengunjung -->
+            <section id="taufik_komentar" class="taufik_section">
+                <h4>Komentar Pengunjung Untuk Pemilik Website</h4>
+                <div id="taufik_komentar-list"></div>
+                <!-- Daftar komentar pengunjung akan ditampilkan di sini -->
+            </section>
+        </main>
+
+        <!-- Footer halaman dengan hak cipta dan informasi pengembang -->
+        <footer>
+            <p>&copy; 2024 SDN 1 Manonjaya. All rights reserved.</p><br>
+            <p> Web by : <a href="https://www.instagram.com/taufikchy_/" target="_blank">taufikchy_</a><br></p>
+        </footer>
+
+        <!-- JavaScript untuk manipulasi gambar latar belakang dan fitur komentar -->
+        <script>
+            function toggleMenu() {
+                document.getElementById("taufik_nav-links").classList.toggle("show");
+            }
+
+            // Daftar gambar background yang ingin ditampilkan di header
+            const backgroundImages = [
+                "GAMBAR/4.jpg",
+                "GAMBAR/2.jpg",
+                "GAMBAR/1.jpg",
+                "GAMBAR/lapang.webp",
+            ];
+
+            let currentBackgroundIndex = 0;
+            const header = document.querySelector("header");
+
+            // Fungsi untuk mengganti gambar latar belakang header secara berkala
+            function changeBackgroundImage() {
+                currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.length;
+                header.style.backgroundImage = `url(${backgroundImages[currentBackgroundIndex]})`;
+            }
+
+            // Mengatur interval waktu untuk mengganti gambar setiap 3 detik
+            setInterval(changeBackgroundImage, 3000);
+
+            // Menentukan halaman aktif berdasarkan URL saat ini
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll("nav ul li a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("taufik_active");
+                }
+            });
+
+            // Fungsi untuk memuat komentar dari localStorage dan menampilkannya
+            function loadKomentar() {
+                const komentarList = JSON.parse(localStorage.getItem("komentarList")) || [];
+                const komentarContainer = document.getElementById("taufik_komentar-list");
+
+                komentarContainer.innerHTML = "";
+
+                komentarList.forEach((komentar, index) => {
+                    const komentarItem = document.createElement("div");
+                    komentarItem.classList.add("taufik_komentar-item");
+                    komentarItem.innerHTML = `<strong>${komentar.nama}:</strong> <p>${komentar.pesan}</p>`;
+
+                    const hapusButton = document.createElement("button");
+                    hapusButton.innerText = "Hapus";
+                    hapusButton.classList.add("taufik_hapus-button");
+                    hapusButton.onclick = () => hapusKomentar(index);
+
+                    komentarItem.appendChild(hapusButton);
+                    komentarContainer.appendChild(komentarItem);
+                });
+            }
+
+            // Fungsi untuk menghapus komentar dari daftar dan memperbarui localStorage
+            function hapusKomentar(index) {
+                const komentarList = JSON.parse(localStorage.getItem("komentarList")) || [];
+                komentarList.splice(index, 1);
+                localStorage.setItem("komentarList", JSON.stringify(komentarList));
+                loadKomentar();
+            }
+
+            // Memuat komentar ketika halaman selesai dimuat
+            document.addEventListener("DOMContentLoaded", loadKomentar);
+        </script>
+    </div>
+</body>
+
+</html>
